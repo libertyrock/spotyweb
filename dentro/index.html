@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<title>Title</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<link rel="stylesheet" href="../w3.css">
+<script src="../jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+<script src="../w3.js"></script>
+<script src="code.js"></script>
+
+<body>
+    <script id="user-profile-template" type="text/x-handlebars-template">
+        <div class="w3-container">
+            <div class="w3-row">
+                <div class="w3-col">
+                    <b>Iniciado como {{display_name}}</b>
+                    <img width="100" src="{{images.0.url}}" />
+                </div>
+                <div class="w3-col">
+                    Display name {{display_name}}<br>
+                    Id {{id}}<br>
+                    Email {{email}}<br>
+                    Spotify URI <a href="{{external_urls.spotify}}">{{external_urls.spotify}}</a><br>
+                    Link <a href="{{href}}">{{href}}</a><br>
+                    Profile Image <a href="{{images.0.url}}">{{images.0.url}}</a><br>
+                    Country {{country}}<br>
+                </div>  
+            </div>
+        </div>
+    </script>
+
+    <script id="oauth-template" type="text/x-handlebars-template">
+        <h2>oAuth info</h2>
+        <dl class="dl-horizontal">
+          <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
+        </dl>
+      </script>
+  
+ 
+    <div id="listreleases">
+    </div>
+</body>
+
+</html>
